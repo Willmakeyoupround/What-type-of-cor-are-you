@@ -1,0 +1,34 @@
+body {
+    font-family: 'Oswald', sans-serif;
+    background-color: red;
+    text-align: center;
+}
+
+img {
+    width: 400px;
+}
+
+.comment {
+    width: 300px;
+    height: 15px;
+    border: solid black;
+    text-align: center;
+}
+
+.submit {
+    width: 100px;
+    height: 50px;
+    border: solid Black;
+
+}
+
+.dodgeDemon {
+    display: none;
+}
+
+.CadillacEscalade {
+    display: none;
+  
+}
+
+
