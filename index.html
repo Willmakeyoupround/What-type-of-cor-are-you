@@ -1,0 +1,107 @@
+<!DOCTYPE html> <html><head>
+        <title>What type of cor are you</title>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&amp;display=swap" rel="stylesheet">
+    <style>body {
+    font-family: 'Oswald', sans-serif;
+    background-color: red;
+    text-align: center;
+}
+
+img {
+    width: 400px;
+}
+
+.comment {
+    width: 300px;
+    height: 15px;
+    border: solid black;
+    text-align: center;
+}
+
+.submit {
+    width: 100px;
+    height: 50px;
+    border: solid Black;
+
+}
+
+.dodgeDemon {
+    display: none;
+}
+
+.CadillacEscalade {
+    display: none;
+  
+}
+
+
+</style></head>
+    <body class="body">
+        <div class="title">
+            <h1>What car are you?</h1>
+        </div>
+        <div class="stuff">
+            <div class="questions">
+                <h4>What is your current battery presentage?</h4>
+                <p>
+                    <input class="presentage" type="number" placeholder="comment">
+
+                </p>
+
+                <img alt="Green supercar" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFxoPxXm0LueFkaqs43WxzEM2ER2xzZT9R_6I56LSoBQ&amp;s">
+                <h4>do you perfer, Roblox or Fortnite?</h4>
+                <div class="answer">
+                    
+               <input class="Roblox" placeholder="Comment">
+                    
+                </div>
+                <img class="Car2" alt="red supercar" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfQhbZHogIPpTiRkyKcgx-cVBsNrI0NI9Hf-PKOMQRYg&amp;s">
+            </div>
+            <div class="result">
+                this is where the user will see their quiz result!
+            </div>
+        </div>
+        <button class="submit">Submit </button>
+        <img class="dodgeDemon" alt="dodge demon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi80kd_hUnJ1yMnCloyFvNmREKV_oXO4gZlQpZiWJVHQ&amp;s">
+        
+        <img class="CadillacEscalade" alt="A shiny Cadillac Escalade" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlqDf5ZXUzy27cgvXMXsOHCpBcenNYuXOEhdnJ1R1_KFs2X_CLjHtE0TuLdcVzc5O8-ME&amp;usqp=CAU">
+
+    
+<script>
+/*__POPCODESTART__*/
+var submitButton = document.querySelector(".submit");
+var Questions = document.querySelector(".questions");
+var dodgeDemon = document.querySelector(".dodgeDemon");
+var body = document.querySelector(".body");
+var Fortnight = document.querySelector("Fortnight");
+
+submitButton.onclick = function () {
+  var presentage = document.querySelector(".presentage").value;
+  var answer = document.querySelector(".Roblox").value;
+  console.log("hello");
+  var comment = document.querySelector(".comment");
+  console.log("hello2");
+  var stuff = document.querySelector(".stuff");
+  console.log("hello3");
+  var CadillacEscalade = document.querySelector(".CadillacEscalade").value;
+  console.log("hello4");
+  var result = document.querySelector(".result");
+  console.log("hello5");
+  console.log(Number(presentage));
+  console.log(Number(presentage) < 50);
+  console.log(answer);
+
+  if (Number(presentage) <= 50 && answer === "Roblox") {
+    result.innerHTML = " Your battery is " + presentage + " and your faovrite game is " + answer + " so your a Cadillac Escalade! ";
+    console.log("sup2");
+  } else if (presentage >= 51 && answer === "Roblox") {
+    console.log("sup");
+    result.innerHTML = " Your battery is " + presentage + " and your favorite game is " + answer + " so your a Dodge demon! ";
+  } else if (presentage <= 50 && answer === "Fortnite") {
+    console.log("sup3");
+    result.innerHTML = " Your battery is " + presentage + " and your favorite game is " + answer + " so your an old Honda Civic! ";
+  } else if (presentage >= 51 && answer === "Fortnite") {
+    result.innerHTML = " Your battery is " + presentage + " and your favorite game is " + answer + " so your an old Toyota Camry! ";
+  }
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBvcGNvZGVQcmV2aWV3LmpzIl0sIm5hbWVzIjpbInN1Ym1pdEJ1dHRvbiIsImRvY3VtZW50IiwicXVlcnlTZWxlY3RvciIsIlF1ZXN0aW9ucyIsImRvZGdlRGVtb24iLCJib2R5IiwiRm9ydG5pZ2h0Iiwib25jbGljayIsInByZXNlbnRhZ2UiLCJ2YWx1ZSIsImFuc3dlciIsImNvbnNvbGUiLCJsb2ciLCJjb21tZW50Iiwic3R1ZmYiLCJDYWRpbGxhY0VzY2FsYWRlIiwicmVzdWx0IiwiTnVtYmVyIiwiaW5uZXJIVE1MIl0sIm1hcHBpbmdzIjoiQUFBQSxJQUFJQSxZQUFZLEdBQUdDLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixTQUF2QixDQUFuQjtBQUNBLElBQUlDLFNBQVMsR0FBR0YsUUFBUSxDQUFDQyxhQUFULENBQXVCLFlBQXZCLENBQWhCO0FBQ0EsSUFBSUUsVUFBVSxHQUFHSCxRQUFRLENBQUNDLGFBQVQsQ0FBdUIsYUFBdkIsQ0FBakI7QUFDQSxJQUFJRyxJQUFJLEdBQUdKLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixPQUF2QixDQUFYO0FBQ0EsSUFBSUksU0FBUyxHQUFHTCxRQUFRLENBQUNDLGFBQVQsQ0FBdUIsV0FBdkIsQ0FBaEI7O0FBSUFGLFlBQVksQ0FBQ08sT0FBYixHQUF1QixZQUFXO0FBQzlCLE1BQUlDLFVBQVUsR0FBR1AsUUFBUSxDQUFDQyxhQUFULENBQXVCLGFBQXZCLEVBQXNDTyxLQUF2RDtBQUNBLE1BQUlDLE1BQU0sR0FBR1QsUUFBUSxDQUFDQyxhQUFULENBQXVCLFNBQXZCLEVBQWtDTyxLQUEvQztBQUNBRSxFQUFBQSxPQUFPLENBQUNDLEdBQVIsQ0FBWSxPQUFaO0FBQ0EsTUFBSUMsT0FBTyxHQUFHWixRQUFRLENBQUNDLGFBQVQsQ0FBdUIsVUFBdkIsQ0FBZDtBQUNJUyxFQUFBQSxPQUFPLENBQUNDLEdBQVIsQ0FBWSxRQUFaO0FBQ0osTUFBSUUsS0FBSyxHQUFHYixRQUFRLENBQUNDLGFBQVQsQ0FBdUIsUUFBdkIsQ0FBWjtBQUNJUyxFQUFBQSxPQUFPLENBQUNDLEdBQVIsQ0FBWSxRQUFaO0FBQ0osTUFBSUcsZ0JBQWdCLEdBQUdkLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixtQkFBdkIsRUFBNENPLEtBQW5FO0FBQ0lFLEVBQUFBLE9BQU8sQ0FBQ0MsR0FBUixDQUFZLFFBQVo7QUFDSixNQUFJSSxNQUFNLEdBQUdmLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixTQUF2QixDQUFiO0FBQ09TLEVBQUFBLE9BQU8sQ0FBQ0MsR0FBUixDQUFZLFFBQVo7QUFDUEQsRUFBQUEsT0FBTyxDQUFDQyxHQUFSLENBQVlLLE1BQU0sQ0FBQ1QsVUFBRCxDQUFsQjtBQUNBRyxFQUFBQSxPQUFPLENBQUNDLEdBQVIsQ0FBWUssTUFBTSxDQUFDVCxVQUFELENBQU4sR0FBcUIsRUFBakM7QUFDQUcsRUFBQUEsT0FBTyxDQUFDQyxHQUFSLENBQVlGLE1BQVo7O0FBQ0EsTUFBSU8sTUFBTSxDQUFDVCxVQUFELENBQU4sSUFBc0IsRUFBdEIsSUFBNEJFLE1BQU0sS0FBSyxRQUEzQyxFQUFxRDtBQUNqRE0sSUFBQUEsTUFBTSxDQUFDRSxTQUFQLEdBQWlCLHNCQUFzQlYsVUFBdEIsR0FBbUMsNkJBQW5DLEdBQW1FRSxNQUFuRSxHQUE0RSxnQ0FBN0Y7QUFDQUMsSUFBQUEsT0FBTyxDQUFDQyxHQUFSLENBQVksTUFBWjtBQUNILEdBSEQsTUFHTyxJQUFJSixVQUFVLElBQUksRUFBZCxJQUFvQkUsTUFBTSxLQUFLLFFBQW5DLEVBQTZDO0FBQ2hEQyxJQUFBQSxPQUFPLENBQUNDLEdBQVIsQ0FBWSxLQUFaO0FBQ0RJLElBQUFBLE1BQU0sQ0FBQ0UsU0FBUCxHQUFtQixzQkFBc0JWLFVBQXRCLEdBQW1DLDZCQUFuQyxHQUFtRUUsTUFBbkUsR0FBNEUsMEJBQS9GO0FBQ0YsR0FITSxNQUdBLElBQUlGLFVBQVUsSUFBSSxFQUFkLElBQW9CRSxNQUFNLEtBQUssVUFBbkMsRUFBK0M7QUFDbERDLElBQUFBLE9BQU8sQ0FBQ0MsR0FBUixDQUFZLE1BQVo7QUFDREksSUFBQUEsTUFBTSxDQUFDRSxTQUFQLEdBQWlCLHNCQUFzQlYsVUFBdEIsR0FBbUMsNkJBQW5DLEdBQW1FRSxNQUFuRSxHQUE0RSwrQkFBN0Y7QUFDRixHQUhNLE1BR0EsSUFBSUYsVUFBVSxJQUFJLEVBQWQsSUFBb0JFLE1BQU0sS0FBSyxVQUFuQyxFQUErQztBQUN0RE0sSUFBQUEsTUFBTSxDQUFDRSxTQUFQLEdBQWlCLHNCQUFzQlYsVUFBdEIsR0FBbUMsNkJBQW5DLEdBQW1FRSxNQUFuRSxHQUE0RSxnQ0FBN0Y7QUFDQztBQUdILENBN0JGIiwic291cmNlc0NvbnRlbnQiOlsibGV0IHN1Ym1pdEJ1dHRvbiA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIuc3VibWl0XCIpO1xubGV0IFF1ZXN0aW9ucyA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIucXVlc3Rpb25zXCIpO1xubGV0IGRvZGdlRGVtb24gPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLmRvZGdlRGVtb25cIik7XG5sZXQgYm9keSA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIuYm9keVwiKTtcbmxldCBGb3J0bmlnaHQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiRm9ydG5pZ2h0XCIpO1xuXG5cblxuc3VibWl0QnV0dG9uLm9uY2xpY2sgPSBmdW5jdGlvbigpIHtcbiAgICBsZXQgcHJlc2VudGFnZSA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIucHJlc2VudGFnZVwiKS52YWx1ZTtcbiAgICBsZXQgYW5zd2VyID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5Sb2Jsb3hcIikudmFsdWU7XG4gICAgY29uc29sZS5sb2coXCJoZWxsb1wiKTtcbiAgICBsZXQgY29tbWVudCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIuY29tbWVudFwiKTtcbiAgICAgICAgY29uc29sZS5sb2coXCJoZWxsbzJcIik7XG4gICAgbGV0IHN0dWZmID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5zdHVmZlwiKTtcbiAgICAgICAgY29uc29sZS5sb2coXCJoZWxsbzNcIik7XG4gICAgbGV0IENhZGlsbGFjRXNjYWxhZGUgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLkNhZGlsbGFjRXNjYWxhZGVcIikudmFsdWU7XG4gICAgICAgIGNvbnNvbGUubG9nKFwiaGVsbG80XCIpO1xuICAgIGxldCByZXN1bHQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnJlc3VsdFwiKTtcbiAgICAgICAgICAgY29uc29sZS5sb2coXCJoZWxsbzVcIik7XG4gICAgY29uc29sZS5sb2coTnVtYmVyKHByZXNlbnRhZ2UpKTtcbiAgICBjb25zb2xlLmxvZyhOdW1iZXIocHJlc2VudGFnZSkgPCA1MCk7XG4gICAgY29uc29sZS5sb2coYW5zd2VyKTtcbiAgICBpZiAoTnVtYmVyKHByZXNlbnRhZ2UpIDw9IDUwICYmIGFuc3dlciA9PT0gXCJSb2Jsb3hcIikge1xuICAgICAgICByZXN1bHQuaW5uZXJIVE1MPVwiIFlvdXIgYmF0dGVyeSBpcyBcIiArIHByZXNlbnRhZ2UgKyBcIiBhbmQgeW91ciBmYW92cml0ZSBnYW1lIGlzIFwiICsgYW5zd2VyICsgXCIgc28geW91ciBhIENhZGlsbGFjIEVzY2FsYWRlISBcIiA7XG4gICAgICAgIGNvbnNvbGUubG9nKFwic3VwMlwiKTtcbiAgICB9IGVsc2UgaWYgKHByZXNlbnRhZ2UgPj0gNTEgJiYgYW5zd2VyID09PSBcIlJvYmxveFwiKSB7XG4gICAgICAgIGNvbnNvbGUubG9nKFwic3VwXCIpO1xuICAgICAgIHJlc3VsdC5pbm5lckhUTUwgPSBcIiBZb3VyIGJhdHRlcnkgaXMgXCIgKyBwcmVzZW50YWdlICsgXCIgYW5kIHlvdXIgZmF2b3JpdGUgZ2FtZSBpcyBcIiArIGFuc3dlciArIFwiIHNvIHlvdXIgYSBEb2RnZSBkZW1vbiEgXCI7XG4gICAgfSBlbHNlIGlmIChwcmVzZW50YWdlIDw9IDUwICYmIGFuc3dlciA9PT0gXCJGb3J0bml0ZVwiKSB7XG4gICAgICAgIGNvbnNvbGUubG9nKFwic3VwM1wiKTtcbiAgICAgICByZXN1bHQuaW5uZXJIVE1MPVwiIFlvdXIgYmF0dGVyeSBpcyBcIiArIHByZXNlbnRhZ2UgKyBcIiBhbmQgeW91ciBmYXZvcml0ZSBnYW1lIGlzIFwiICsgYW5zd2VyICsgXCIgc28geW91ciBhbiBvbGQgSG9uZGEgQ2l2aWMhIFwiO1xuICAgIH0gZWxzZSBpZiAocHJlc2VudGFnZSA+PSA1MSAmJiBhbnN3ZXIgPT09IFwiRm9ydG5pdGVcIikge1xuICAgIHJlc3VsdC5pbm5lckhUTUw9XCIgWW91ciBiYXR0ZXJ5IGlzIFwiICsgcHJlc2VudGFnZSArIFwiIGFuZCB5b3VyIGZhdm9yaXRlIGdhbWUgaXMgXCIgKyBhbnN3ZXIgKyBcIiBzbyB5b3VyIGFuIG9sZCBUb3lvdGEgQ2FtcnkhIFwiO1xuICAgIH1cbiAgICBcblxuIH07Il19</script></body></html>
